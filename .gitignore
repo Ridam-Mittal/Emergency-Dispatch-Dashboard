@@ -1,0 +1,4 @@
+p1-backend/.env
+p1-frontend/.env
+node_modules
+dist

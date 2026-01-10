@@ -1,0 +1,122 @@
+.list-wrapper {
+  padding: 12px;
+}
+
+.incident-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 12px;
+  background: white;
+}
+
+.incident-header {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.incident-title {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.badge-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.badge {
+  font-size: 11px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  color: white;
+  font-weight: 600;
+}
+
+.badge.high { background: #dc2626; }
+.badge.medium { background: #f59e0b; }
+.badge.low { background: #2563eb; }
+
+.badge.reported { background: #9ca3af; }
+.badge.assigned { background: #f59e0b; }
+.badge.resolved { background: #16a34a; }
+
+.badge.ambulance { background: #2563eb; }
+.badge.fire { background: #dc2626; }
+.badge.police { background: #7c3aed; }
+
+.badge.available { background: #16a34a; }
+.badge.dispatched { background: #f59e0b; }
+.badge.unavailable { background: #6b7280; }
+
+.time {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 6px;
+}
+
+.unit-list {
+  margin-top: 10px;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 10px;
+}
+
+.unit-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.unit-name {
+  font-weight: 600;
+}
+
+.unit-distance {
+  color: #6b7280;
+}
+
+.section-label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.action-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.dispatch-btn {
+  flex: 1;
+  background: #111827;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.resolve-btn {
+  flex: 1;
+  background: white;
+  border: 1px solid #16a34a;
+  color: #16a34a;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.empty-text {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.info-text {
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 10px;
+}

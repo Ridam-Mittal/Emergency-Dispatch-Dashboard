@@ -1,0 +1,20 @@
+.tab-bar {
+  display: flex;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  background: white;
+  cursor: pointer;
+  font-weight: 600;
+  color: #6b7280;
+  border-bottom: 3px solid transparent;
+}
+
+.tab-btn.active {
+  color: #111827;
+  border-bottom: 3px solid #111827;
+}
