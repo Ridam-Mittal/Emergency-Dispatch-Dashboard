@@ -25,7 +25,13 @@ export const createUnitService = async ({ unitName, unitType, coordinates }) => 
 
 
 export const getAllUnitsService = async () => {
-  return await Unit.find();
+  const units = await Unit.find();
+
+  // populate the incident data to which it is assigned to if  status is 'busy'
+  return await Unit.find().populate({
+    path: 'assignedIncident',
+    select: 'description status location createdAt updatedAt',
+  });
 };
 
 

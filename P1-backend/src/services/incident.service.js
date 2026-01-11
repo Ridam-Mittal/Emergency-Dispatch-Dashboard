@@ -131,7 +131,7 @@ export const dispatchNearestUnitService = async (id) => {
     const unitToAssign = nearestUnits[0]; // Pick the closest most suitable unit
 
     // update Unit status to BUSY
-    await Unit.findByIdAndUpdate(unitToAssign._id, { status: "BUSY" });
+    await Unit.findByIdAndUpdate(unitToAssign._id, { status: "BUSY", assignedIncident: incident._id });
 
     // Update Incident with assigned unit
     incident.assignedUnitId = unitToAssign._id;
@@ -163,12 +163,14 @@ export const resolveIncidentService = async (incidentId) => {
   // Free the unit
   await Unit.findByIdAndUpdate(
     incident.assignedUnitId,
-    { status: "AVAILABLE" }
+    { status: "AVAILABLE",
+        assignedIncident: null },
   );
 
   // Resolve incident
   incident.status = "RESOLVED";
   incident.resolvedAt = new Date();
+
 
   await incident.save();
 

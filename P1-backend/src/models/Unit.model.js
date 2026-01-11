@@ -19,7 +19,11 @@ const UnitSchema = new mongoose.Schema(
       enum: ["AVAILABLE", "BUSY", "OFFLINE"],
       default: "AVAILABLE"
     },
-
+    assignedIncident: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Incident',
+      default: null
+    },
     location: {
       type: {
         type: String,

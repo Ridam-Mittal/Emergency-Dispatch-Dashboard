@@ -19,7 +19,7 @@ export async function processNextIncident() {
   try {
     incident.aiStatus = "PROCESSING";
     await incident.save();
-
+    console.log('calling ai service for incident:', incident.description);
     const result = await classifySeverity(incident.description);
 
     const { severity, unitRequired } = result;
@@ -36,7 +36,7 @@ export async function processNextIncident() {
     await incident.save();
   } finally {
     isProcessing = false;
-
+    console.log('AI processing completed for incident:', incident.description);
     // trigger next item
     processNextIncident();
   }

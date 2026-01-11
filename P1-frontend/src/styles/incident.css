@@ -47,6 +47,11 @@
 .badge.fire { background: #dc2626; }
 .badge.police { background: #7c3aed; }
 
+.badge.busy {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
 .badge.available { background: #16a34a; }
 .badge.dispatched { background: #f59e0b; }
 .badge.unavailable { background: #6b7280; }
@@ -119,4 +124,46 @@
   font-size: 13px;
   font-weight: 600;
   margin-top: 10px;
+}
+
+.unit-details {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #374151;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.detail-row span {
+  font-weight: 500;
+}
+
+.muted {
+  color: #6b7280;
+}
+
+.assigned-box {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 8px;
+  margin: 8px 0;
+}
+
+.detail-title {
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.assigned-status {
+  background: #eef2ff;
+  color: #4338ca;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
 }
