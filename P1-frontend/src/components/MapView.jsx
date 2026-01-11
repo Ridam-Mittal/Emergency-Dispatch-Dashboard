@@ -27,12 +27,12 @@ const MapView = ({ selectedIncident }) => {
 
   const fetchData = async () => {
     try {
-      console.log("🔄 Fetching dashboard data...");
+      // console.log("🔄 Fetching dashboard data...");
 
       const { incidents, units } = await getDashboardData();
 
-      console.log("✅ INCIDENTS:", incidents);
-      console.log("✅ UNITS:", units);
+      // console.log("✅ INCIDENTS:", incidents);
+      // console.log("✅ UNITS:", units);
 
       setIncidents(incidents);
       setUnits(units);
